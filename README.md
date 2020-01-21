@@ -1,10 +1,10 @@
 # Scuba_Diver
 A Scuba diving application built with React Native
 
-A clone of a scuba diving application found on the app store for practice purposes.
+This scuba diving application is based on an application that can be found in the app store. This was created from scratch for practice purposes.
 
 Built with React Native using hooks and context. All functional components. 
 
-An aim of building this app was to use the least amount of code to increase readability.
+The aim of building this app is to use the least amount of code and make it super clear to increase readability.
 
 All styling done with flexbox.
