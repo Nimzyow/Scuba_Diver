@@ -5,6 +5,8 @@ import { createStackNavigator } from "react-navigation-stack";
 
 import PlanScreen from "./components/screens/plan/Plan";
 
+import DiverTableState from "./context/diverTable/diverTableState";
+
 const MainNavigator = createStackNavigator(
   {
     Home: { screen: PlanScreen }
@@ -22,7 +24,11 @@ const MainNavigator = createStackNavigator(
 const AppContainer = createAppContainer(MainNavigator);
 
 const App = () => {
-  return <AppContainer />;
+  return (
+    <DiverTableState>
+      <AppContainer />
+    </DiverTableState>
+  );
 };
 
 export default App;

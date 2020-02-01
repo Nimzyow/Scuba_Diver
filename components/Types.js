@@ -1,0 +1,3 @@
+export const SET_DEPTH = "SET_DEPTH";
+export const SET_BOTTOM_TIME = "SET_BOTTOM_TIME";
+export const SET_SURFACE_INTERVAL = "SET_SURFACE_INTERVAL";

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { View, StyleSheet, Text } from "react-native";
 
+import DiverTableContext from "../../../../context/diverTable/diverTableContext";
+
 const SafetyStop = () => {
+  const diverTableContext = useContext(DiverTableContext);
+  const { safetyStop } = diverTableContext;
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Safety Stop: RECOMMENDED</Text>
+      <Text style={styles.text}>Safety Stop: {safetyStop}</Text>
     </View>
   );
 };

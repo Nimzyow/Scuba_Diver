@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { View, Text, StyleSheet, Picker } from "react-native";
 
 import UserDialHeading from "./UserDialHeading";
 import UserDialPicker from "./UserDialPicker";
 
-const UserDial = () => {
-  const [depth, setDepth] = useState("10");
-  const [bottomTime, setBottomTime] = useState("2");
-  const [surfaceInterval, setSurfaceInterval] = useState("00:00");
+import DiverTableContext from "../../../context/diverTable/diverTableContext";
+
+const UserDial = props => {
+  const {
+    depth,
+    bottomTime,
+    surfaceInterval,
+    setDepth,
+    setBottomTime,
+    setSurfaceInterval
+  } = useContext(DiverTableContext);
 
   let depths = [];
   let bottomTimes = [];

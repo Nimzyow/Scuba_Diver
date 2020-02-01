@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 import TimesItem from "./TimesItem";
 import TimesEquation from "./TimesEquation";
 
+import DiverTableContext from "../../../../context/diverTable/diverTableContext";
+
 const Times = () => {
+  const diverTableContext = useContext(DiverTableContext);
+
+  const { rNT, aBT, tBT } = diverTableContext;
+
   return (
     <View style={styles.container}>
-      <TimesItem title={"RNT"} value={"0"} />
+      <TimesItem title={"RNT"} value={rNT} />
       <TimesEquation equation={"+"} />
-      <TimesItem title={"ABT"} value={"2"} />
+      <TimesItem title={"ABT"} value={aBT} />
       <TimesEquation equation={"="} />
-      <TimesItem title={"TBT"} value={"2"} />
+      <TimesItem title={"TBT"} value={tBT} />
     </View>
   );
 };
