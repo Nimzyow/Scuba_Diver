@@ -3,127 +3,39 @@ export const diveTableInitialPressureGroup = (depth, bottomTime) => {
   let bT = Number(bottomTime);
 };
 
-export const depth10 = [
-  { Group: "A", range: [2, 3, 4, 5, 6, 7, 8, 9, 10] },
-  { Group: "B", range: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
-  { Group: "C", range: [21, 22, 23, 24, 25, 26] },
-  { Group: "D", range: [27, 28, 29, 30] },
-  { Group: "E", range: [31, 32, 33, 34] },
-  { Group: "F", range: [35, 36, 37] },
-  { Group: "G", range: [38, 39, 40, 41] },
-  { Group: "H", range: [42, 43, 44, 45] },
-  { Group: "I", range: [46, 47, 48, 49, 50] },
-  { Group: "J", range: [51, 52, 53, 54] },
-  { Group: "K", range: [55, 56, 57, 58, 59] },
-  { Group: "L", range: [60, 61, 62, 63, 64] },
-  { Group: "M", range: [65, 66, 67, 68, 69, 70] },
-  { Group: "N", range: [71, 72, 73, 74, 75] },
-  { Group: "O", range: [76, 77, 78, 79, 80, 81, 82] },
-  { Group: "P", range: [83, 84, 85, 86, 87, 88] },
-  { Group: "Q", range: [89, 90, 91, 92, 93, 94, 95] },
-  { Group: "R", range: [96, 97, 98, 99, 100, 101, 102, 103, 104] },
-  { Group: "S", range: [105, 106, 107, 108, 109, 110, 111, 112] },
-  { Group: "T", range: [113, 114, 115, 116, 117, 118, 119, 120, 121, 122] },
-  {
-    Group: "U",
-    range: [123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133]
-  },
-  {
-    Group: "V",
-    range: [134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145]
-  },
-  {
-    Group: "W",
-    range: [
-      146,
-      147,
-      148,
-      149,
-      150,
-      151,
-      152,
-      153,
-      154,
-      155,
-      156,
-      157,
-      158,
-      159,
-      160
-    ]
-  },
-  {
-    Group: "X",
-    range: [
-      161,
-      162,
-      163,
-      164,
-      165,
-      166,
-      167,
-      168,
-      169,
-      170,
-      171,
-      172,
-      173,
-      174,
-      175,
-      176,
-      177,
-      178
-    ]
-  },
-  {
-    Group: "Y",
-    range: [
-      179,
-      180,
-      181,
-      182,
-      183,
-      184,
-      185,
-      186,
-      187,
-      188,
-      189,
-      190,
-      191,
-      192,
-      193,
-      194,
-      195,
-      196,
-      197,
-      198,
-      199
-    ]
-  },
-  {
-    Group: "Z",
-    range: [
-      200,
-      201,
-      202,
-      203,
-      204,
-      205,
-      206,
-      207,
-      208,
-      209,
-      210,
-      211,
-      212,
-      213,
-      214,
-      215,
-      216,
-      217,
-      218,
-      219
-    ]
+const createValueArr = (min, max) => {
+  arr = [];
+  for (let i = min; i <= max; i++) {
+    arr.push(i);
   }
+  return arr;
+};
+
+export const depth10 = [
+  { Group: "A", range: createValueArr(2, 10) },
+  { Group: "B", range: createValueArr(11, 20) },
+  { Group: "C", range: createValueArr(21, 26) },
+  { Group: "D", range: createValueArr(27, 30) },
+  { Group: "E", range: createValueArr(31, 34) },
+  { Group: "F", range: createValueArr(35, 37) },
+  { Group: "G", range: createValueArr(38, 41) },
+  { Group: "H", range: createValueArr(42, 45) },
+  { Group: "I", range: createValueArr(46, 50) },
+  { Group: "J", range: createValueArr(51, 54) },
+  { Group: "K", range: createValueArr(55, 59) },
+  { Group: "L", range: createValueArr(60, 64) },
+  { Group: "M", range: createValueArr(65, 70) },
+  { Group: "N", range: createValueArr(71, 75) },
+  { Group: "O", range: createValueArr(76, 82) },
+  { Group: "P", range: createValueArr(83, 88) },
+  { Group: "Q", range: createValueArr(89, 95) },
+  { Group: "R", range: createValueArr(96, 104) },
+  { Group: "S", range: createValueArr(105, 112) },
+  { Group: "T", range: createValueArr(113, 122) },
+  { Group: "U", range: createValueArr(123, 133) },
+  { Group: "V", range: createValueArr(134, 145) },
+  { Group: "W", range: createValueArr(146, 160) },
+  { Group: "X", range: createValueArr(161, 178) },
+  { Group: "Y", range: createValueArr(179, 199) },
+  { Group: "Z", range: createValueArr(200, 219) }
 ];
